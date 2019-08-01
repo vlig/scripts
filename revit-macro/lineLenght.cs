@@ -15,4 +15,5 @@ public void lineLength()
     }
     string lengthWithUnits = UnitFormatUtils.Format(doc.GetUnits(), UnitType.UT_Length, length, false, false);
     TaskDialog.Show("Length", ids.Count + " elements = " + lengthWithUnits);
+    // TaskDialog.Show("Длина", "Всего элементов: " + ids.Count + "\nСуммарная длина: " + lengthWithUnits);
 }
