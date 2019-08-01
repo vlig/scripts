@@ -1,4 +1,5 @@
 public void lineLength()
+// https://boostyourbim.wordpress.com/2016/06/21/total-length-of-multiple-lines/
 {
     double length = 0;
     Document doc = this.ActiveUIDocument.Document;
