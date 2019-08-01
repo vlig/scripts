@@ -1,4 +1,5 @@
 public void selectAllLineStyle()
+// https://boostyourbim.wordpress.com/2018/08/11/biltna2018-wish-granted-select-detail-lines-by-line-type/
 {
     Document doc = this.ActiveUIDocument.Document;
     UIDocument uidoc = this.ActiveUIDocument;
