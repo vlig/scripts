@@ -4,7 +4,7 @@ public void registerWarningSuppresion()
     Document doc = this.ActiveUIDocument.Document;   
     Application app = doc.Application;
     UIApplication uiapp = new UIApplication(app);
-    uiapp.DialogBoxShowing += new EventHandler(dismissTaskDialog);
+    uiapp.DialogBoxShowing += new EventHandler<DialogBoxShowingEventArgs>(dismissTaskDialog);
 }
 
 private void dismissTaskDialog(object sender, DialogBoxShowingEventArgs args)
@@ -13,6 +13,7 @@ private void dismissTaskDialog(object sender, DialogBoxShowingEventArgs args)
     if (e == null)
         return;
     if (e.Message.StartsWith("This change will be applied to all elements of type"))
+    // if (e.Message.StartsWith("Данное изменение будет применено ко всем элементам следующего типа"))
     {
         e.OverrideResult((int)TaskDialogCommonButtons.Ok);
     }
